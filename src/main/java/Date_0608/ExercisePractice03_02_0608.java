@@ -17,12 +17,10 @@ public class ExercisePractice03_02_0608 {
         int date = input.nextInt();
         int month = input.nextInt();
         int year = input.nextInt();
-        int[] month30Days = {4, 6, 9, 11};
-        int[] month31Days = {1, 3, 5, 7, 8, 10, 12};
 
         if (month >= 1 && month <= 12 && year > 0) {
-            for (int i = 0; i < month30Days.length; i++) {
-                if ((month == month30Days[i]) && (date >=1 && date <=30)) {
+            if((month == 4)||(month == 6)||(month ==9)||(month == 11)){
+                if (date >=1 && date <=30) {
                     System.out.println("Đây là ngày, tháng, năm hợp lệ");
                     int date_after_1_date = date + 1;
                     System.out.println("Ngày sau đó 1 ngày là: " + date_after_1_date +" " + month + " "+ year);
@@ -30,8 +28,8 @@ public class ExercisePractice03_02_0608 {
                     System.out.println("Ngày trước đó 1 ngày là: " + date_before_1_date +" " + month + " "+ year);
                 }
             }
-            for (int i = 0; i < month31Days.length; i++) {
-                if (month == month31Days[i]&& (date >=1 && date <=31)) {
+            if((month == 1)||(month == 3)||(month ==5)||(month == 7)||(month == 8)||(month ==10)||(month == 12)) {
+                if ((date >=1 && date <=31)) {
                     System.out.println("Đây là ngày, tháng, năm hợp lệ");
                     if(month == 1 && date == 1){
                         int date_after_1_date = date + 1;
