@@ -58,14 +58,20 @@ public class ExercisePractice03_02_0608 {
             if (month == 2) {
                 if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
                     if(date >=1 && date <=29){
-                        System.out.println("Đây là ngày, tháng, năm hợp lệ");
+                        System.out.println("Đây là ngày, tháng của năm nhuận!!!");
                         if(date == 29){
                             int date_after_1_date = 1;
                             int monthNext = month + 1;
                             System.out.println("Ngày sau đó 1 ngày là: " + date_after_1_date +" " + monthNext + " "+ year);
                             int date_before_1_date = date - 1;
                             System.out.println("Ngày trước đó 1 ngày là: " + date_before_1_date +" " + month + " "+ year);
-                        }else{
+                        }else if (date == 1){
+                            int date_after_1_date = date + 1;
+                            System.out.println("Ngày sau đó 1 ngày là: " + date_after_1_date +" " + month + " "+ year);
+                            int date_before_1_date = 31;
+                            int previousMonth = 1;
+                            System.out.println("Ngày trước đó 1 ngày là: " + date_before_1_date +" " + previousMonth + " "+ year);
+                        } else {
                             int date_after_1_date = date + 1;
                             System.out.println("Ngày sau đó 1 ngày là: " + date_after_1_date +" " + month + " "+ year);
                             int date_before_1_date = date - 1;
@@ -75,14 +81,20 @@ public class ExercisePractice03_02_0608 {
                         System.out.println("Đây không phải là ngày, tháng, năm hợp lệ");
                     }
                 } else {
-                    if(date >=1 && date <=28){
+                    if(date >=1 && date <=28) {
                         System.out.println("Đây là ngày, tháng, năm hợp lệ");
-                        if(date == 28){
+                        if (date == 28) {
                             int date_after_1_date = 1;
                             int monthNext = month + 1;
-                            System.out.println("Ngày sau đó 1 ngày là: " + date_after_1_date +" " + monthNext + " "+ year);
+                            System.out.println("Ngày sau đó 1 ngày là: " + date_after_1_date + " " + monthNext + " " + year);
                             int date_before_1_date = date - 1;
-                            System.out.println("Ngày trước đó 1 ngày là: " + date_before_1_date +" " + month + " "+ year);
+                            System.out.println("Ngày trước đó 1 ngày là: " + date_before_1_date + " " + month + " " + year);
+                        }else if (date == 1){
+                            int date_after_1_date = date + 1;
+                            System.out.println("Ngày sau đó 1 ngày là: " + date_after_1_date +" " + month + " "+ year);
+                            int date_before_1_date = 31;
+                            int previousMonth = 1;
+                            System.out.println("Ngày trước đó 1 ngày là: " + date_before_1_date +" " + previousMonth + " "+ year);
                         }else{
                             int date_after_1_date = date + 1;
                             System.out.println("Ngày sau đó 1 ngày là: " + date_after_1_date +" " + month + " "+ year);
