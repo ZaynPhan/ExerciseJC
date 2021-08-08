@@ -1,4 +1,4 @@
-//Nhập vào 2 số nguyên.
+package Date_0408;//Nhập vào 2 số nguyên.
 //Tính min và max của hai số đó
 
 public class Exercise10_0408 {

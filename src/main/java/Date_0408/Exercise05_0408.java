@@ -1,4 +1,4 @@
-//Bài 5
+package Date_0408;//Bài 5
 //Nhập 2 số a và b
 //Tính tổng, hiệu, tích và thương của hai số đó
 

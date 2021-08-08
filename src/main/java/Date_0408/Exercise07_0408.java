@@ -1,4 +1,4 @@
-//Bài 7
+package Date_0408;//Bài 7
 //Nhập điểm thi và hệ số 3 môn Toán, Lý, Hóa của một học sinh
 //Tính điểm trung bình của học sinh đó.
 

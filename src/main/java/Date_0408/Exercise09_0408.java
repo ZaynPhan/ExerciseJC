@@ -1,4 +1,4 @@
-//Nhập vào số xe của bạn (gồm tối đa 5 chữ số).
+package Date_0408;//Nhập vào số xe của bạn (gồm tối đa 5 chữ số).
 //Cho biết số xe của bạn được mấy nút?
 
 public class Exercise09_0408 {

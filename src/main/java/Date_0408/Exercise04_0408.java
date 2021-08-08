@@ -1,4 +1,4 @@
-//Bài 4
+package Date_0408;//Bài 4
 //Nhập năm sinh của mọt người
 //Tính tuổi người đó
 

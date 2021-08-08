@@ -1,4 +1,4 @@
-//Bài 6
+package Date_0408;//Bài 6
 //Nhập tên sản phẩm, số lượng và đơn giá
 //Tính tiền và thuế giá trị gia tăng phải trả, biết:
 //a. tiền = số lượng * đơn giá
