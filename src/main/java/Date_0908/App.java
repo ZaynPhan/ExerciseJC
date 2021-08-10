@@ -44,7 +44,8 @@ public class App {
         System.out.println("5. Nhập n nguyên dương: ");
         int Number5 = input.nextInt();
         if (Number5 > 0) {
-            System.out.format("Số ngược lại của %d là: %d", Number5, exercise0906.reversedNumber(Number5));
+            System.out.format("Số ngược lại của %d là: ", Number5);
+            exercise0906.reversedNumber(Number5);
         }
     }
 }

@@ -64,12 +64,12 @@ public class exercise0906 {
     }
 
     static int reversedNumber (int Number5) {
-        int unit, reversed = 0;
+        int unit = 0;
         while (Number5 != 0) {
             unit = Number5 % 10;
-            reversed = reversed * 10 + unit;
+            System.out.print(unit);
             Number5 /= 10;
         }
-        return reversed;
+        return Number5;
     }
 }
