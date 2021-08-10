@@ -68,7 +68,7 @@ public class exercise0906 {
         while (Number5 != 0) {
             unit = Number5 % 10;
             System.out.print(unit);
-            Number5 /= 10 + 1;
+            Number5 /= 10 + 1 + Number5;
         }
         return Number5;
     }
