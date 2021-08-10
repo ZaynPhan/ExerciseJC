@@ -24,8 +24,8 @@ public class exercise0906 {
         return ((squareRoot - Math.floor(squareRoot)) == 0);
     }
 
-        static long calculateFactorial(int number2D) {
-        long factorialResult = 1;
+    static int calculateFactorial(int number2D) {
+        int factorialResult = 1;
         for (int i = 2; i <= number2D; i++) {
             factorialResult *= i;
         }
@@ -53,7 +53,7 @@ public class exercise0906 {
         return true;
     }
 
-    static int sumOfPrimeNumberSum (int number4) {
+    static int sumOfPrimeNumber (int number4) {
         int sum = 0 ;
         for (int i = 0; i < number4; i++) {
             if (isPrimeNumber(i)) {
@@ -63,8 +63,8 @@ public class exercise0906 {
         return sum;
     }
 
-    static int reversedNumber (int Number5) {
-        int unit = 0;
+    static long reversedNumber (long Number5) {
+        long unit = 0L;
         while (Number5 != 0) {
             unit = Number5 % 10;
             System.out.print(unit);

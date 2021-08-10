@@ -23,26 +23,29 @@ public class App {
     //d. S = 1*2*...*n = n!
         System.out.println("2d. Nhập n =");
         int number2D = input.nextInt();
-        System.out.println("S = " + exercise0906.calculateFactorial(number2D));
+        int fatorialNumber = exercise0906.calculateFactorial(number2D);
+        System.out.println("S = " + fatorialNumber);
 
     //e. S = 1! + 2! + ... + n!
         System.out.println("2e. Nhập n =");
         int number2E = input.nextInt();
-        System.out.println("S = " + exercise0906.factorialSum(number2E));
+        int factorialSum = exercise0906.factorialSum(number2E);
+        System.out.println("S = " + factorialSum);
 
     //4.Tính tổng các số nguyên tố nhỏ hơn n (0 < n < 50)
         System.out.println("4. Nhập n (0 < n < 50):");
         int number4 = input.nextInt();
+        int sumOfPrimeNumber = exercise0906.sumOfPrimeNumber(number4);
         if (number4 < 0 || number4 > 50){
             System.out.println("n không hợp lệ!");
         }else{
-            System.out.println("Tổng các số nguyên tố nhỏ hơn n là: " + exercise0906.sumOfPrimeNumberSum(number4));
+            System.out.println("Tổng các số nguyên tố nhỏ hơn n là: " + sumOfPrimeNumber);
         }
 
 
         //5.Nhập một số nguyên dương n. Xuất ra số ngược lại. Ví dụ: Nhập 1706  Xuất 6071.
         System.out.println("5. Nhập n nguyên dương: ");
-        int Number5 = input.nextInt();
+        long Number5 = input.nextInt();
         if (Number5 > 0) {
             System.out.format("Số ngược lại của %d là: ", Number5);
             exercise0906.reversedNumber(Number5);
