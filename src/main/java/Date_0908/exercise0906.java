@@ -43,6 +43,8 @@ public class exercise0906 {
     public static boolean isPrimeNumber(int number4) {
         if (number4 < 2) {
             return false;
+        } else if(number4 == 2){
+            return true;
         } else {
             for (int i = 2; i <= Math.sqrt(number4); i++) {
                 if (number4 % i == 0) {
