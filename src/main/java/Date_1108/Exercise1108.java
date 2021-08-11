@@ -46,7 +46,7 @@ public class Exercise1108 {
         int sum = 0;
         for (int i = 0; i < arr3B.length; i++) {
             if(isPrimeNumber(arr3B[i])){
-                sum +=arr3B[i];
+                sum += arr3B[i];
             }
         }
         return sum;
