@@ -1,8 +1,10 @@
 package Date_1108;
+import Date_0908.exercise0906;
+
 
 public class Exercise1108 {
     public static void printArray(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
+        for (int i : arr) {
             System.out.format("%d, ", arr[i]);
         }
         System.out.println();
@@ -34,8 +36,8 @@ public class Exercise1108 {
 
     public static int module4Not5(int[] arr3A){
         int amount = 0;
-        for (int i = 0; i < arr3A.length; i++) {
-            if ((arr3A[i] % 4 == 0) && (arr3A[i] % 5 !=0)){
+        for (int j : arr3A) {
+            if ((j % 4 == 0) && (j % 5 != 0)) {
                 amount++;
             }
         }
@@ -43,12 +45,12 @@ public class Exercise1108 {
     }
 
     public static int sumPrimeNumber(int[] arr3B){
-        int sum = 0;
-        for (int i = 0; i < arr3B.length; i++) {
-            if(isPrimeNumber(arr3B[i])){
-                sum += arr3B[i];
+        int sumPrime = 0;
+        for (int i : arr3B) {
+            if (exercise0906.isPrimeNumber(i)) {
+                sumPrime += i;
             }
         }
-        return sum;
+        return sumPrime;
     }
 }

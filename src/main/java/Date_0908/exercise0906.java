@@ -40,7 +40,7 @@ public class exercise0906 {
         return sum;
     }
 
-    static boolean isPrimeNumber(int number4) {
+    public static boolean isPrimeNumber(int number4) {
         if (number4 < 2) {
             return false;
         } else {
