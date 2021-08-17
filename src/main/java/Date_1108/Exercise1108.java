@@ -1,6 +1,6 @@
 package Date_1108;
 
-import Date_0908.exercise0906;
+import Date_0908.exercise0908;
 
 
 public class Exercise1108 {
@@ -48,10 +48,63 @@ public class Exercise1108 {
     public static int sumPrimeNumber(int[] arr3B) {
         int sumPrime = 0;
         for (int i : arr3B) {
-            if (exercise0906.isPrimeNumber(i)) {
+            if (exercise0908.isPrimeNumber(i)) {
                 sumPrime += i;
             }
         }
         return sumPrime;
     }
+
+    public static void sort(int[] arr5D) {
+        int posCount = 0;
+        int negCount = 0;
+
+        for (int i = 0; i < arr5D.length; i++) {
+            if (arr5D[i] > 0) {
+                for (int j = 0; j < arr5D.length; j++) {
+                    if ((j == i + 1) && arr5D[j] > 0 && arr5D[j] > arr5D[i]) {
+                        int temp = arr5D[j];
+                        arr5D[j] = arr5D[i];
+                        arr5D[i] = temp;
+                        break;
+                    }
+                }
+                posCount++;
+            } else if (arr5D[i] < 0) {
+                for (int j = 0; j < arr5D.length; j++) {
+                    if ((j == i + 1) && arr5D[j] < 0 && arr5D[j] < arr5D[i]) {
+                        int temp = arr5D[j];
+                        arr5D[j] = arr5D[i];
+                        arr5D[i] = temp;
+                        break;
+                    }
+                }
+                negCount++;
+            }
+        }
+
+        for (int i = 0; i < posCount; i++) {
+            if (arr5D[i] <= 0) {
+                for (int j = 0; j < arr5D.length; j++) {
+                    if ((j == i + 1) && arr5D[i] > 0) {
+                        int temp = arr5D[j];
+                        arr5D[j] = arr5D[i];
+                        arr5D[i] = temp;
+                    }
+                }
+            }
+        }
+
+        for (int i = posCount; i < posCount + negCount; i++) {
+            int j;
+            for (j = 0; j < arr5D.length; j++) {
+                if ((arr5D[j] == 0) && (j == i + 1) && arr5D[i] < 0) {
+                    int temp = arr5D[j];
+                    arr5D[j] = arr5D[i];
+                    arr5D[i] = temp;
+                }
+            }
+        }
+    }
 }
+
