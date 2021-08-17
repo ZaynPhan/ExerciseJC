@@ -52,9 +52,8 @@ public class exercise1608 {
         int consonantCharacter = 0;
         for (int i = 0; i < s.length(); i++) {
             char character = s.charAt(i);
-            if (character >= 'a' && character <= 'z' && character != 'u' &&
-                    character != 'e' && character != 'o' &&
-                    character != 'a' && character != 'i') {
+            if (character > 'a' && character <= 'z' && character != 'u' &&
+                    character != 'e' && character != 'o' && character != 'i') {
                 consonantCharacter++;
             }
         }
