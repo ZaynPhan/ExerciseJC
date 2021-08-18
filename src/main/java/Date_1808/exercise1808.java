@@ -3,25 +3,25 @@ package Date_1808;
 import java.util.Scanner;
 
 public class exercise1808 {
-    public static int[][] inputMatrix() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Số dòng: ");
-        int r = sc.nextInt();
-
-        System.out.println("Số cột: ");
-        int c = sc.nextInt();
-
-        int[][] ret = new int[r][c];
-
-        for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c; j++) {
-                System.out.format("a[%d][%d] = ", i, j);
-                ret[i][j] = sc.nextInt();
-            }
-        }
-        return ret;
-    }
+//    public static int[][] inputMatrix() {
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Số dòng: ");
+//        int r = sc.nextInt();
+//
+//        System.out.println("Số cột: ");
+//        int c = sc.nextInt();
+//
+//        int[][] ret = new int[r][c];
+//
+//        for (int i = 0; i < r; i++) {
+//            for (int j = 0; j < c; j++) {
+//                System.out.format("a[%d][%d] = ", i, j);
+//                ret[i][j] = sc.nextInt();
+//            }
+//        }
+//        return ret;
+//    }
 
     public static int[][] generateMatrix(int r, int c, int min, int max) {
         int[][] ret = new int[r][c];
@@ -93,6 +93,7 @@ public class exercise1808 {
         return max;
     }
 
+    //Tổng dòng r:
     public static int sumRow(int[][] a) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Input row index:");
@@ -104,6 +105,7 @@ public class exercise1808 {
         return sumR;
     }
 
+    //Tổng cột c:
     public static int sumColumn(int[][] a) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Input column index:");
@@ -115,6 +117,7 @@ public class exercise1808 {
         return sumC;
     }
 
+    //Tổng đường chéo chính:
     public static int sumMainDiagonal(int[][] a) {
         int sum = 0;
         for (int i = 0, r = a.length; i < r; i++) {
@@ -127,6 +130,7 @@ public class exercise1808 {
         return sum;
     }
 
+    //Tổng đường chéo phụ:
     public static int sumAuxiliaryDiagonal(int[][] a) {
         int sum = 0;
         for (int i = 0, r = a.length; i < r; i++) {
@@ -135,6 +139,7 @@ public class exercise1808 {
         return sum;
     }
 
+    //Tổng nửa trên đường chéo chính:
     public static int sumHalfAboveMainDiagonal(int[][] a) {
         int sum = 0;
         for (int j = 0, m = a.length; j < m; j++) {
@@ -145,6 +150,7 @@ public class exercise1808 {
         return sum;
     }
 
+    //Tổng nửa dưới đường chéo chính:
     public static int sumHalfUnderneathMainDiagonal(int[][] a) {
         int sum = 0;
         for (int i = 0, m = a.length; i < m; i++) {
@@ -155,6 +161,7 @@ public class exercise1808 {
         return sum;
     }
 
+    //Tổng nửa trên đường chéo phụ:
     public static int sumHalfAboveAuxiliaryDiagonal(int[][] a) {
         int sum = 0;
         for (int j = 0, l = a.length; j < l; j++) {
@@ -165,6 +172,7 @@ public class exercise1808 {
         return sum;
     }
 
+    //Tổng nửa dưới đường chéo phụ:
     public static int sumHalfUnderneathAuxiliaryDiagonal(int[][] a) {
         int sum = 0;
         for (int j = 0, l = a.length; j < l; j++) {
