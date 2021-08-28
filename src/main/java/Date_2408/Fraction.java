@@ -124,6 +124,7 @@ public class Fraction {
             fr2.numerator = this.numerator * fr1.numerator;
             fr2.denominator = this.denominator * fr1.denominator;
         }
+        fr2.reduceFraction();
         return fr2;
     }
 
@@ -134,6 +135,7 @@ public class Fraction {
             fr2.numerator = this.numerator * fr1.denominator;
             fr2.denominator = this.denominator * fr1.numerator;
         }
+        fr2.reduceFraction();
         return fr2;
     }
 
@@ -156,6 +158,7 @@ public class Fraction {
         int minCommonDivisor = findMinCommonDivisor(this.denominator, another.denominator);
         fr1.numerator = this.numerator * (minCommonDivisor / this.denominator);
         fr1.denominator = minCommonDivisor;
+        fr1.reduceFraction();
         return fr1;
     }
 

@@ -9,12 +9,25 @@ public class Point {
     public Point() {
     }
 
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
     public int getX() {
         return this.x;
     }
 
     public int getY() {
         return this.y;
+    }
+
+    public static Point generate() {
+        final int max = 10;
+        final int min = -10;
+        int x = (int) Math.floor(Math.random() * (max - min)) + min;
+        int y = (int) Math.floor(Math.random() * (max - min)) + min;
+        return new Point(x, y);
     }
 
     //Nhập tọa độ x, y
@@ -77,4 +90,5 @@ public class Point {
             System.out.println("This point is in Quadrant IV");
         }
     }
+
 }
