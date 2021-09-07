@@ -41,15 +41,15 @@ public class Lecturer {
         String lecturerPhoneNumber = input.nextLine();
     }
 
-    //Nhập danh sách giảng viên
-    public static Lecturer[] listLecturer(int quantity) {
-        Lecturer[] listLecturer = new Lecturer[quantity];
-        for (int i = 0; i < quantity; i++) {
-            listLecturer[i] = new Lecturer();
-            listLecturer[i].inputLecturerInfo();
-        }
-        return listLecturer;
-    }
+//    //Nhập danh sách giảng viên
+//    public static Lecturer[] listLecturer(int quantity) {
+//        Lecturer[] listLecturer = new Lecturer[quantity];
+//        for (int i = 0; i < quantity; i++) {
+//            listLecturer[i] = new Lecturer();
+//            listLecturer[i].inputLecturerInfo();
+//        }
+//        return listLecturer;
+//    }
 
     //Xuất thông tin giảng viên:
     @Override
@@ -62,12 +62,12 @@ public class Lecturer {
         return sb.toString();
     }
 
-    //Xuất danh sách giảng viên
-    public static void printListLecturer(Lecturer[] listLecturer) {
-        for (int i = 0; i < listLecturer.length; i++) {
-            System.out.println((i+1) + ". " + listLecturer[i].toString());
-            System.out.println();
-        }
-    }
+//    //Xuất danh sách giảng viên
+//    public static void printListLecturer(Lecturer[] listLecturer) {
+//        for (int i = 0; i < listLecturer.length; i++) {
+//            System.out.println((i+1) + ". " + listLecturer[i].toString());
+//            System.out.println();
+//        }
+//    }
 }
 
