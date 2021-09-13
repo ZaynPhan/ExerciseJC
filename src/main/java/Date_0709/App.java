@@ -26,10 +26,11 @@ public class App {
         System.out.println("Quantity of faculty member is: ");
         int quantityFM = input.nextInt();
         FacultyMember[] listFacultyMember = FacultyMember.listFacultyMember(quantityFM);
+        System.out.println();
 
         //Nhập thông tin giảng viên thỉnh giảng
-        System.out.println("Quantity of visiting lecturer is: ");
         int quantityVL = quantityTotal - quantityFM;
+        System.out.println("Quantity of visiting lecturer is: " + quantityVL);
         VisitingLecturer[] listVisitingLecturer = VisitingLecturer.listVisitingLecturer(quantityVL);
 
     //2. Xuất toàn bộ danh sách giảng viên:

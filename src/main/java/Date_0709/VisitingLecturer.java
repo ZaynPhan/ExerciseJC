@@ -17,7 +17,7 @@ public class VisitingLecturer extends Lecturer {
     }
 
     public double getTotalWage() {
-        return this.totalWage;
+        return this.teachingHours * 200000;
     }
 
     //Nhập thông tin giảng viên thỉnh giảng
@@ -49,7 +49,7 @@ public class VisitingLecturer extends Lecturer {
         super.toString();
         sb.append("Teaching hours: ").append(teachingHours).append('\n');
         sb.append("From company: ").append(company).append('\n');
-        sb.append("Total wage in month: ").append(totalWage).append('\n');
+        sb.append("Total wage in month: ").append(teachingHours * 200000).append('\n');
         sb.append("Type: Visiting Member").append('\n');
         return sb.toString();
     }

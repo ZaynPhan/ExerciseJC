@@ -22,7 +22,7 @@ public class FacultyMember extends Lecturer {
     }
 
     public double getTotalWage() {
-        return this.totalWage;
+        return (this.specifiedHours + this.overtimeHours) * 200000;
     }
 
     //Nhập thông tin giảng viên cơ hữu
@@ -48,12 +48,12 @@ public class FacultyMember extends Lecturer {
     //Xuất thông tin 1 giảng viên cơ hữu:
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer(" ");
+        final StringBuffer sb = new StringBuffer("");
         super.toString();
         sb.append("Specified teaching hours in month: ").append(specifiedHours).append('\n');
         sb.append("Overtime hours in month: ").append(overtimeHours).append('\n');
-        sb.append("Total teaching hours in month: ").append(teachingHours).append('\n');
-        sb.append("Total wage in month: ").append(totalWage).append('\n');
+        sb.append("Total teaching hours in month: ").append(specifiedHours + overtimeHours).append('\n');
+        sb.append("Total wage in month: ").append((specifiedHours + overtimeHours) * 200000).append('\n');
         sb.append("Type: Faculty Member").append('\n');
         return sb.toString();
     }
