@@ -47,6 +47,7 @@ public class App {
         }
 
         //b. Xuất thông tin tất cả đất có dạng chỉ định
+        System.out.println("There are all Rectangle lands as below: ");
         for (LandShape landShape : listLand) {
             if (landShape instanceof Rectangle) {
                 System.out.println(landShape);

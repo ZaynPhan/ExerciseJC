@@ -18,9 +18,10 @@ public class Triangle extends LandShape {
     }
 
     //Tính diện tích tam giác khi có tọa độ 3 điểm
-    public static double getLandArea(Point pointA, Point pointB, Point pointC) {
-        return 1 / 2 * Math.abs((pointB.getX() - pointA.getX()) * (pointC.getY() - pointA.getY())
-                - (pointC.getX() - pointA.getX()) * (pointB.getY() - pointA.getY()));
+    @Override
+    public double getLandArea() {
+        return (double) 1 / 2 * Math.abs(((pointB.getX() - pointA.getX()) * (pointC.getY() - pointA.getY()))
+                - ((pointC.getX() - pointA.getX()) * (pointB.getY() - pointA.getY())));
     }
 
     //Nhập thông tin đất
@@ -55,13 +56,14 @@ public class Triangle extends LandShape {
     //Xuất thông tin đất
     @Override
     public String toString() {
+        Triangle triangle = new Triangle();
         final StringBuffer sb = new StringBuffer("Triangle Land {");
         sb.append("Point A = ").append(pointA.toString());
         sb.append(", point B = ").append(pointB.toString());
         sb.append(", point C = ").append(pointC.toString());
-        sb.append(", land area = ").append(Triangle.getLandArea(pointA, pointB, pointC));
+        sb.append(", land area = ").append(triangle.getLandArea());
         sb.append(", price/unit = ").append(pricePerUnit);
-        sb.append(", price/land = ").append(landArea * Triangle.getLandArea(pointA, pointB, pointC));
+        sb.append(", price/land = ").append(landArea * triangle.getLandArea());
         sb.append('}');
         return sb.toString();
     }

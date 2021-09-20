@@ -3,7 +3,7 @@ package Date_1109;
 import java.util.Scanner;
 
 //Hình dạng đất
-public class LandShape {
+public abstract class LandShape {
     protected Point pointA;
     protected double landArea, pricePerUnit, pricePerLand;
 
@@ -17,12 +17,9 @@ public class LandShape {
         this.pricePerLand = pricePerLand;
     }
 
-    public void fromConsole(Scanner input) {
-    }
+    public abstract void fromConsole(Scanner input);
 
-    public double getLandArea() {
-        return 0;
-    }
+    public abstract double getLandArea();
 
     public double getPricePerLand() {
         return pricePerUnit * landArea;
