@@ -8,10 +8,8 @@ package Date_1409;
 * Điện kinh doanh cao áp
 * Điện kinh doanh trung áp
 * Điện kinh doanh thấp áp */
-
-public class App {
-    public static void main(String[] args) {
-
-    }
-    }
-}
+//
+//public class App {
+//
+//
+//}

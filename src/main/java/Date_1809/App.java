@@ -10,45 +10,39 @@ package Date_1809;
 
 import Date_1809.entities.BMI;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
-    public static void main (String[] args){
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Input your weight: ");
+        System.out.println("Input your weight(kg): ");
         String weight = input.nextLine();
         boolean validateWeight = BMI.validate(weight);
 
-        System.out.println("Input your height: ");
+        System.out.println("Input your height(m): ");
         String height = input.nextLine();
         boolean validateHeight = BMI.validate(height);
 
-        if(validateWeight && validateHeight){
-            double valueBMI = BMI.calculateBMI(Double.parseDouble(weight),Double.parseDouble(height));
+        if (validateWeight && validateHeight) {
+            double valueBMI = BMI.calculateBMI(Double.parseDouble(weight), Double.parseDouble(height));
             System.out.println("Your BMI is " + valueBMI);
-            try {
-                if (valueBMI < 18.5) {
-                    System.out.println("Your body is Thin");
-                } else if (valueBMI >= 18.5 && valueBMI < 25) {
-                    System.out.println("Your body is Normal");
-                } else if (valueBMI >= 25 && valueBMI < 30) {
-                    System.out.println("Your body is Overweight");
-                } else if (valueBMI >= 30 && valueBMI < 35) {
-                    System.out.println("Your body is Overweight type 1");
-                } else if (valueBMI >= 35 && valueBMI < 40) {
-                    System.out.println("Your body is Overweight type 2");
-                } else {
-                    System.out.println("Your body is Overweight type 3");
-                }
-            } catch (InputMismatchException inputMismatchException){
-                throw new InputMismatchException("Un-existed BMI value of normal Human!");
-            } catch (Exception exception){
-                exception.getMessage();
+            if (valueBMI < 18.5) {
+                System.out.println("Your body is Thin");
+            } else if (valueBMI >= 18.5 && valueBMI < 25) {
+                System.out.println("Your body is Normal");
+            } else if (valueBMI >= 25 && valueBMI < 30) {
+                System.out.println("Your body is Overweight");
+            } else if (valueBMI >= 30 && valueBMI < 35) {
+                System.out.println("Your body is Overweight type 1");
+            } else if (valueBMI >= 35 && valueBMI < 40) {
+                System.out.println("Your body is Overweight type 2");
+            } else {
+                System.out.println("Your body is Overweight type 3");
             }
-
-            System.out.println("Next, please!");
         }
+
+        System.out.println("Next, please!");
     }
 }
+
