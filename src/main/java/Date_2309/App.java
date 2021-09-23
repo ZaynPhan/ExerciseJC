@@ -23,7 +23,7 @@ public class App {
         System.out.println("Input your compared string: ");
         String input = sc.nextLine();
 
-        String regex = "\\d{1,2}[-|\\/]\\d{1,2}[-|\\/]\\d{4}";
+        String regex = "\\d{1,2}[\\-|\\/]\\d{1,2}[\\-|\\/]\\d{4}";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(input);
 
@@ -41,7 +41,7 @@ public class App {
         System.out.println("Input your compared string: ");
         String inputText = sc.nextLine();
 
-        String regexEmail = "\\d{1,2}[-|\\/]\\d{1,2}[-|\\/]\\d{4}";
+        String regexEmail = "^[a-zA-Z][\\w|\\-]{0,63}\\@[a-zA-Z]{1,}\\.[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})?$";
         Pattern patternEmail = Pattern.compile(regexEmail);
         Matcher matcher = patternEmail.matcher(inputText);
 

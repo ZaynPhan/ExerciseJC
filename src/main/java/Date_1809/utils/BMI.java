@@ -21,6 +21,6 @@ public class BMI {
             throw new InvalidHeightException();
         }
 
-        return w / (h * h);
+        return (double) w / (h * h);
     }
 }
