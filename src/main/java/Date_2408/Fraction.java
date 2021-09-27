@@ -1,5 +1,6 @@
 package Date_2408;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //Phân số
@@ -162,5 +163,17 @@ public class Fraction {
         return fr1;
     }
 
-    //
+    //Tìm phân số lớn nhất từ Array List
+    public static Fraction findMax(ArrayList<Fraction> listFraction) {
+        Fraction maxFraction = listFraction.get(0);
+        for (int i = 0; i < listFraction.size() - 1; i++) {
+            if (listFraction.get(i).compareTo(listFraction.get(i + 1)) > 0) {
+                maxFraction = listFraction.get(i);
+                listFraction.get(i+1).equals(listFraction.get(i));
+            } else {
+                maxFraction.equals(listFraction.get(i+1));
+            }
+        }
+        return maxFraction;
+    }
 }
