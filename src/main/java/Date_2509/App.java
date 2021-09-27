@@ -75,8 +75,8 @@ public class App {
                     default:
                         break;
                 }
-            } catch (InputMismatchException inputMismatchException) {
-                System.out.println(inputMismatchException);
+            } catch (InvalidCommand invalidCommand) {
+                System.out.println(invalidCommand);
                 return;
             }
 
