@@ -15,7 +15,6 @@ các chức năng sau:
 import Date_2408.Fraction;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
@@ -32,7 +31,7 @@ public class App {
             listFraction.add(i, Fraction.fromString(input.nextLine()));
         }
 
-        //Danh sách các lệnh được lặp lại mãi mãi theo index
+        //Danh sách các lệnh được lặp lại mãi mãi theo id
         do {
             System.out.println("These are your commands, pick 1 of them");
             System.out.println("1. Print list of input fractions");
@@ -83,6 +82,5 @@ public class App {
             System.out.println("----------^v----------");
 
         } while (true);
-
     }
 }
