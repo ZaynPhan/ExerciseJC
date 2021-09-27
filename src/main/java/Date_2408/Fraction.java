@@ -163,7 +163,7 @@ public class Fraction {
         return fr1;
     }
 
-    //Tìm phân số lớn nhất từ Array List
+    //Tìm phân số lớn nhất trong danh sách
     public static Fraction findMax(ArrayList<Fraction> listFraction) {
         Fraction maxFraction = listFraction.get(0);
         for (int i = 0; i < listFraction.size() - 1; i++) {
