@@ -44,33 +44,40 @@ public class App {
             try {
                 System.out.print("Your command:");
                 int command = input.nextInt();
+
                 switch (command) {
                     case 1: //Xuất danh sách phân số
                         for (Fraction e : listFraction) {
                             System.out.println(e.toString());
                         }
                         break;
+
                     case 2: //Thêm phân số
                         listFraction.add(Fraction.fromString(input.nextLine()));
                         break;
+
                     case 3: //Xóa phân số tại vị trí thứ k
                         System.out.print("Input index k of fraction you want to eliminate: ");
                         int k = input.nextInt();
                         listFraction.remove(k);
                         break;
+
                     case 4: //Cập nhật phân số tại vị trí thứ k
                         System.out.print("Input index l of fraction you want to update: ");
                         int l = input.nextInt();
                         System.out.println("Input new fraction:");
                         listFraction.set(l, Fraction.fromString(input.nextLine()));
                         break;
+
                     case 5: //Tìm các phân số có giá trị lớn nhất
                         System.out.println("The biggest fraction of list is: ");
                         Fraction.findMax(listFraction);
                         break;
+
                     case 6: //Xóa tất cả phân số
                         listFraction.clear();
                         break;
+
                     default:
                         break;
                 }
