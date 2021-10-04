@@ -15,6 +15,7 @@ các chức năng sau:
 import Date_2408.Fraction;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
@@ -24,7 +25,7 @@ public class App {
         //Nhập vào danh sách các phân số
         System.out.println("Input quantity of fraction: ");
         int capacity = input.nextInt();
-        ArrayList<Fraction> listFraction = new ArrayList<>(capacity);
+        ArrayList<Fraction> listFraction = new ArrayList<>(capacity + 10);
 
         System.out.println("Input fraction(s): ");
         for (int i = 0; i < capacity; i++) {
@@ -45,44 +46,53 @@ public class App {
                 System.out.print("Your command:");
                 int command = input.nextInt();
 
-                switch (command) {
-                    case 1: //Xuất danh sách phân số
-                        for (Fraction e : listFraction) {
-                            System.out.println(e.toString());
-                        }
-                        break;
+                if (command <= 0 && command > 6) {
+                    throw new InvalidCommandException();
 
-                    case 2: //Thêm phân số
-                        listFraction.add(Fraction.fromString(input.nextLine()));
-                        break;
+                } else {
 
-                    case 3: //Xóa phân số tại vị trí thứ k
-                        System.out.print("Input index k of fraction you want to eliminate: ");
-                        int k = input.nextInt();
-                        listFraction.remove(k);
-                        break;
+                    switch (command) {
+                        case 1: //Xuất danh sách phân số
+                            for (Fraction e : listFraction) {
+                                System.out.println(e.toString());
+                            }
+                            break;
 
-                    case 4: //Cập nhật phân số tại vị trí thứ k
-                        System.out.print("Input index l of fraction you want to update: ");
-                        int l = input.nextInt();
-                        System.out.println("Input new fraction:");
-                        listFraction.set(l, Fraction.fromString(input.nextLine()));
-                        break;
+                        case 2: //Thêm phân số
+                            listFraction.add(Fraction.fromString(input.nextLine()));
+                            break;
 
-                    case 5: //Tìm các phân số có giá trị lớn nhất
-                        System.out.println("The biggest fraction of list is: ");
-                        Fraction.findMax(listFraction);
-                        break;
+                        case 3: //Xóa phân số tại vị trí thứ k
+                            System.out.print("Input index k of fraction you want to eliminate: ");
+                            int k = input.nextInt();
+                            listFraction.remove(k);
+                            break;
 
-                    case 6: //Xóa tất cả phân số
-                        listFraction.clear();
-                        break;
+                        case 4: //Cập nhật phân số tại vị trí thứ k
+                            System.out.print("Input index l of fraction you want to update: ");
+                            int l = input.nextInt();
+                            System.out.println("Input new fraction:");
+                            listFraction.set(l, Fraction.fromString(input.nextLine()));
+                            break;
 
-                    default:
-                        break;
+                        case 5: //Tìm các phân số có giá trị lớn nhất
+                            System.out.println("The biggest fraction of list is: ");
+                            Fraction.findMax(listFraction);
+                            break;
+
+                        case 6: //Xóa tất cả phân số
+                            listFraction.clear();
+                            break;
+
+                        default:
+                            break;
+                    }
                 }
-            } catch (InvalidCommand invalidCommand) {
-                System.out.println(invalidCommand);
+            } catch (InvalidCommandException invalidCommandException) {
+                System.out.println(invalidCommandException);
+                return;
+            } catch (InputMismatchException inputMismatchException) {
+                System.out.println(inputMismatchException);
                 return;
             }
 

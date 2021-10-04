@@ -2,8 +2,8 @@ package Date_2509;
 
 import java.util.InputMismatchException;
 
-public class InvalidCommand extends InputMismatchException {
-    public InvalidCommand() {
+public class InvalidCommandException extends InputMismatchException {
+    public InvalidCommandException() {
         super("Wrong input format of command");
     }
 }
